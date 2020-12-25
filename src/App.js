@@ -18,6 +18,9 @@ import SearchScreen from '../src/screens/SearchScreen';
 import WishlistScreen from '../src/screens/WishlistScreen';
 import SettingScreen from '../src/screens/SettingScreen';
 
+//Testing LoginScreen 
+import AuthenticationScreen from '../src/screens/AuthenticationScreen';
+
 const iconActiveColor = "#500000"
 const iconInactiveColor = "#3e3e3e"
 const backgroundActiveColor = "#eaeaea"
@@ -108,7 +111,7 @@ const App = () => {
         />
         <Tabs.Screen
           name='Setting'
-          component={SettingScreen}
+          component={AuthenticationScreen}
         />
       </Tabs.Navigator>
     </NavigationContainer>
