@@ -1,3 +1,4 @@
+import { NavigationHelpersContext } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, Button, View, SafeAreaView, Text, Alert, TouchableOpacity } from 'react-native';
 
@@ -10,7 +11,7 @@ const labelColor = "#500000"
 const SignUpButton = (props) => {
     if(props.buttonStyle == 1){
         return(
-            <TouchableOpacity style={styles.buttonStyle1} onPress={() => Alert.alert('Simple Button pressed')}>
+            <TouchableOpacity style={styles.buttonStyle1} onPress={() => props.navigate('SignUp')}>
                 <Text style={styles.textStyle1}>
                     {props.title}
                 </Text>
@@ -19,7 +20,7 @@ const SignUpButton = (props) => {
     }
     else{
         return(
-            <TouchableOpacity style={styles.buttonStyle2} onPress={() => Alert.alert('Simple Button pressed')}>
+            <TouchableOpacity style={styles.buttonStyle2} onPress={() => props.navigate('SignIn')}>
                 <Text style={styles.textStyle2}>
                     {props.title}
                 </Text>

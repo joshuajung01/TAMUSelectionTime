@@ -55,10 +55,12 @@ export default class App extends React.Component {
         );
     }
 
+
     render() {
+        const {...props} = this.props;
         return (
-            <View style={{ flex: 1, flexDirection:'column', justifyContent: 'center', }}>
-                <View style={{ flex: 6, flexDirection:'column', justifyContent: 'center', alignContent: 'center'}}>
+            <View style={{ flex: 1, flexDirection:'column', justifyContent: 'center', }} {...props}>
+                <View style={{ flex: 6, flexDirection:'column', justifyContent: 'center', alignContent: 'center'}} {...props}>
                     <Carousel
                         layout={"stack"}
                         ref={ref => this.carousel = ref}
@@ -71,12 +73,12 @@ export default class App extends React.Component {
                         onSnapToItem = { index => this.setState({activeIndex:index}) } />
                         { this.pagination }
                 </View>
-                <View style={{flex:1, justifyContent: 'center',}}>
-                    <View style={{flex:1, justifyContent: 'center',}}>
-                        <SignUpButton title="Sign Up" buttonStyle={1}/>
+                <View style={{flex:1, justifyContent: 'center',}} {...props}>
+                    <View style={{flex:1, justifyContent: 'center',}} {...props}>
+                        <SignUpButton title="Sign Up" buttonStyle={1} {...props}/>
                     </View>
-                    <View style={{flex:1, justifyContent: 'center',}}>
-                        <SignUpButton title="Sign In" buttonStyle={2}/>
+                    <View style={{flex:1, justifyContent: 'center',}} {...props}>
+                        <SignUpButton title="Sign In" buttonStyle={2} {...props}/>
                     </View>
                 </View>
                 
